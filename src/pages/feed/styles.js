@@ -9,25 +9,20 @@ export const Container = styled.main`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+   
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h3`
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    width: 320px;
-    margin-bottom: 20px;
-    line-height: 44px;
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 25px;
     color: #FFFFFF;
 `;
 
-export const TitleHighLight = styled.span`
-    color: #E4105D;
-`;
-
-export const TextContent = styled.p`
+export const TitleHighLight = styled.h3`
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -36,4 +31,9 @@ export const TextContent = styled.p`
     margin-bottom: 20px;
     line-height: 22px;
     color: #FFFFFF;
+
+`
+export const Column = styled.div`
+    flex:${({flex})=> flex};
+    padding-right: 24px;
 `;

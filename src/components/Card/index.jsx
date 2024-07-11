@@ -10,30 +10,29 @@ import {
     UserPicture
 } from './styles';
 
-const Card = () => {
+const Card = ({ user = {} }) => {
     return (
         <CardContainer>
-          <ImageBackground src="https://hermes.digitalinnovation.one/public/components/pages/home/header/banner-play.png">
-                    </ImageBackground>
+            <ImageBackground src="https://hermes.digitalinnovation.one/public/components/pages/home/header/banner-play.png" />
             <Content>
                 <UserInfo>
-                    <UserPicture src='https://avatars.githubusercontent.com/u/103468557?v=4' />
+                    <UserPicture src={user.image || 'https://via.placeholder.com/150'} />
                     <div>
-                        <h4>Jefferson Fidelis</h4>
-                        <p>Há 8 minutos</p>
+                        <h4>{user.name || 'Usuário Desconhecido'}</h4>
+                        <p>{user.time || 'Tempo desconhecido'}</p>
                     </div>
                 </UserInfo>
                 <PostInfo>
-                    <h4>Projeto para Curso de HTML e CSS</h4>
+                    <h4>{user.projectTitle || 'Título do Projeto'}</h4>
                     <p>
-                        Projeto feito no curso de HTML e CSS bootcamp DIO do Global Avanade...
-                         <strong>Saiba Mais</strong>
+                        {user.projectDescription || 'Descrição do projeto...'}
+                        <strong> Saiba Mais</strong>
                     </p>
                 </PostInfo>
                 <HasInfo>
-                    <h4>#HTML #CSS #JavaScript</h4>
+                    <h4>{user.hashtags || '#Tags'}</h4>
                     <p>
-                        <FiThumbsUp /> 10
+                        <FiThumbsUp /> {user.likes || 0}
                     </p>
                 </HasInfo>
             </Content>
@@ -41,4 +40,4 @@ const Card = () => {
     );
 };
 
-export {Card} 
+export { Card };
