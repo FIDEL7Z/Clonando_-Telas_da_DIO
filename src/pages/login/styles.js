@@ -12,6 +12,11 @@ export const Container = styled.main`
     align-items: center;
 `;
 
+export const ErrorText = styled.p`
+    color: red;
+    font-size: 12px;
+`
+
 export const Wrapper = styled.div`
     max-width: 300px;
 `;

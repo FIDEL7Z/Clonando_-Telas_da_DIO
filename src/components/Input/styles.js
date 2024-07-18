@@ -10,6 +10,16 @@ export const InputContainer = styled.div`
     align-items: center;
     margin-bottom: 20px;
 `;
+export const ErrorText = styled.p`
+    display: block; 
+    color: #bf1650;
+    margin-top: 8px 0; 
+
+    &::before {
+        content: "⚠ ";
+        margin-right: 4px;
+    }
+`;
 
 export const IconContainer = styled.div`
     margin-right: 10px;
