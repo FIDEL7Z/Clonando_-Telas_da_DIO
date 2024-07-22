@@ -8,6 +8,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 
+import { api } from '../../services/api';
+
 import { 
   Column, 
   Container, 
@@ -28,15 +30,24 @@ const schema = yup.object({
 const Login = () => {
   const navigate = useNavigate();
 
-  const { control, handleSubmit, formState: { errors, isValid } } = useForm({
+  const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    navigate('/feed');
+  const onSubmit = formData => {
+   try{
+ const {data} = api.get(`users?email=${formData.email}&password=${formData.password}`);
+       console.log('retorno api ', data);
+   }
+   catch{
+   alert('Erro ao acessar, tente novamnete');
+   }
   };
+
+  const handleClickSignUp = () => {
+    navigate('/feed');
+  }
 
   return (
     <>
