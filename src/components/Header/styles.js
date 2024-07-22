@@ -50,7 +50,7 @@ export const Menu = styled.a`
     font-size: 12px;
     line-height: 25px;
     color: #FFFFFF;
-    margin-right: 12px;
+    margin-right: 70px;
     text-decoration: none;
 `;
 
