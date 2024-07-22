@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconContainer, InputContainer, InputText, ErrorText } from './styles'; // Certifique-se de incluir ErrorText aqui
+import { IconContainer, InputContainer, InputText, ErrorText } from './styles'; 
 import { Controller } from "react-hook-form";
 
 const Input = ({ leftIcon, name, control, errorMessage, ...rest }) => {

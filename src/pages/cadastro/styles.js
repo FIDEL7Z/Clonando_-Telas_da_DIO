@@ -64,11 +64,7 @@ export const SubTitleLogin = styled.p`
 export const TituloDebaixo = styled.p`
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 35px;
-    line-height: 25px;
+    font-size: 16px;
 `;
 
 export const EsqueciText = styled.p`
@@ -76,16 +72,24 @@ export const EsqueciText = styled.p`
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
- 
-    line-height: 19px;
-   color: #E5E044
+    margin-right: 120px;
+    line-height: 26px;
+    margin: 0; /* Remove a margem padrão */
+   color: #ffffff
+`;
+
+export const EsqueciCriarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaçamento entre os textos */
 `;
 
 export const CriarText = styled.p`
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
+    margin: 0; /* Remove a margem padrão */
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-   color: #E23DD7
+   color:#23DD7A
 `;
