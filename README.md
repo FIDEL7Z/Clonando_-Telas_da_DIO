@@ -21,4 +21,6 @@ O projeto é organizado nas seguintes seções:
 - **Login**: Tela de autenticação de usuários.
 - **Cadastro**: Tela para criação de novas contas de usuário.
 - **Home**: Tela inicial após o login, exibindo conteúdos principais da plataforma.
+- **Feed**: Tela após fazer o login, exibindo o feed.
+
 
