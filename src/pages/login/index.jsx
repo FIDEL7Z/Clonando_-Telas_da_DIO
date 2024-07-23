@@ -35,19 +35,21 @@ const Login = () => {
     mode: 'onChange'
   });
 
-  const onSubmit = formData => {
-   try{
- const {data} = api.get(`users?email=${formData.email}&password=${formData.password}`);
-       console.log('retorno api ', data);
-   }
-   catch{
-   alert('Erro ao acessar, tente novamnete');
-   }
+  const onSubmit = async formData => {
+    try {
+      const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`);
+      if (data.length > 0) {
+        // Sucesso: redirecionar para o feed
+        navigate('/feed');
+      } else {
+        alert('Email ou senha incorretos');
+      }
+    } catch (error) {
+      alert('Erro ao acessar, tente novamente');
+    }
   };
 
-  const handleClickSignUp = () => {
-    navigate('/feed');
-  }
+ 
 
   return (
     <>

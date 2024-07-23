@@ -1,7 +1,6 @@
 {
     "users": [
-        {"id": 1, "name": "Jefferson", "email": "a@a.com" , "password": "1234"},
-        {"id": 2, "name": "Pedro" , "email": "b@b.com" , "password": "123"},
-        {"id": 3, "name": "Maria" , "email": "c@c.com" , "password": "123"}
+      { "id": 1, "name": "aaaaa", "email": "p@email.com", "senha":"123456" },
+      { "id": 2, "name": "bbbb", "email": "j@email.com", "senha":"123456" }
     ]
 }
